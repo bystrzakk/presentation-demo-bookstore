@@ -1,10 +1,10 @@
 package bstrzkk.test.spring.project.controller;
 
+import bstrzkk.test.spring.project.client.RegresClient;
 import bstrzkk.test.spring.project.model.Author;
 import bstrzkk.test.spring.project.model.Book;
 import bstrzkk.test.spring.project.model.response.User;
 import bstrzkk.test.spring.project.service.BookService;
-import bstrzkk.test.spring.project.service.RegresClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

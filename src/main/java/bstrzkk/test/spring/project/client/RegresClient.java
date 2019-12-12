@@ -1,4 +1,4 @@
-package bstrzkk.test.spring.project.service;
+package bstrzkk.test.spring.project.client;
 
 import bstrzkk.test.spring.project.model.response.AllUsersResponse;
 import bstrzkk.test.spring.project.model.response.SingleUserResponse;
