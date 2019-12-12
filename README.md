@@ -8,3 +8,15 @@ ______             _        _                             _
                                                                                             | |   | |    
                                                                                             |_|   |_|    
 ```
+## Stack
+------
+Main Language:
+> Java 11
+
+Frameworks:
+* a
+* b
+
+Libraries:
+* a
+* b 
