@@ -3,6 +3,7 @@ package bstrzkk.test.spring.project.client;
 import bstrzkk.test.spring.project.model.response.AllUsersResponse;
 import bstrzkk.test.spring.project.model.response.SingleUserResponse;
 import bstrzkk.test.spring.project.model.response.User;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -19,7 +20,8 @@ public class RegresClient {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private static final String BASE_URI = "https://reqres.in/api/users/";
+    @Value("${external.api.client.regres}")
+    private String BASE_URI;
 
     public User fetchUser(Integer id) {
         final ResponseEntity<SingleUserResponse> response = restTemplate.getForEntity(buildUri(id), SingleUserResponse.class);
