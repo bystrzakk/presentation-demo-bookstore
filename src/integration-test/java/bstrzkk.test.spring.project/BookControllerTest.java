@@ -64,7 +64,7 @@ public class BookControllerTest {
 
     @Test
     @DisplayName("Should return status code: 200 [OK] and valid Response message contains details about user with id 2")
-    public void testScreeningCompanyByDunsNumber() {
+    public void testExternalCallForUser() {
         given()
                 .pathParam("id", 2)
                 .when()
