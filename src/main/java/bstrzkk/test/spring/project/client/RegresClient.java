@@ -29,9 +29,12 @@ public class RegresClient {
         return requireNonNullElse(response.getBody(), new SingleUserResponse()).getData();
     }
 
+    public ResponseEntity<User> createUser(User user){
+        return restTemplate.postForEntity(buildUri(null), user, User.class);
+    }
+
     public List<User> fetchAllUsers() {
         final ResponseEntity<AllUsersResponse> response = restTemplate.getForEntity(buildUri(null), AllUsersResponse.class);
-
         return requireNonNullElse(response.getBody(), new AllUsersResponse()).getData();
     }
 

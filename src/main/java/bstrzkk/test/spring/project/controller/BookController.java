@@ -6,6 +6,7 @@ import bstrzkk.test.spring.project.model.Book;
 import bstrzkk.test.spring.project.model.response.User;
 import bstrzkk.test.spring.project.service.BookService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,6 +38,11 @@ public class BookController {
     @GetMapping(path = "/users")
     public List<User> getUsers() {
         return regresClient.fetchAllUsers();
+    }
+
+    @PostMapping(path = "/users")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        return regresClient.createUser(user);
     }
 
     @PostMapping(value = "/admin/book", produces = APPLICATION_JSON_VALUE)
