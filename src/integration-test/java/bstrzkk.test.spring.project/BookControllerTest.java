@@ -99,6 +99,9 @@ public class BookControllerTest {
                 .body("last_name", equalToIgnoringCase("Weaver"))
                 .log().body()
                 .statusCode(OK.value());
+
+        // WireMock call verify
+        verify(1, getRequestedFor(urlEqualTo("/api/users/2")));
     }
 
     @Test
