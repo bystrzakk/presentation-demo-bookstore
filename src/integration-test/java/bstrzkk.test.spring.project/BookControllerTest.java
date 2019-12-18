@@ -52,6 +52,7 @@ public class BookControllerTest {
                 //urlPathMatching("/api/.*")  -  only path with regex
                 .willReturn(aResponse()
                         .withStatus(OK.value())
+                        .withFixedDelay(3000)
                         .withHeader("Content-Type", APPLICATION_JSON_VALUE)
                         .withBody(getJsonBodyFromFile("src/integration-test/resources/files/response/user_id_2_response.json"))));
     }
